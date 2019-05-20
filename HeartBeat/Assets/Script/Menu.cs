@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public Text[] buttons = new Text[3];
-    private int[] xPositions = new int[3] {250, 100, 160};
+    private int[] xPositions = new int[3] {160, 100, 140};
     private int[] yPositions = new int[3] {60, -57, -157};
     private bool inCredits = false;
     private RectTransform textPos, imagePos;
@@ -25,39 +25,38 @@ public class Menu : MonoBehaviour
         textPos = buttons[currentOption].GetComponent<RectTransform>();
         Debug.Log(textPos.localPosition);
         buttons[currentOption].GetComponent<Animation>().Play();
-        //pos.y = yPositions[currentOption];
-        //buttons[currentOption].transform.position = new Vector3(xPositions[currentOption], yPositions[currentOption], 0); //pos;
-        //textPos.localPosition = new Vector3(xPositions[currentOption], yPositions[currentOption], 0);
-        //textPos.localPosition = new Vector3(10, 300, 0);
-        //textPos.sizeDelta = new Vector2(600, 200);
         Debug.Log(textPos.localPosition);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow) && currentOption<2)
-        {
-            buttons[currentOption].GetComponent<Animation>().Stop();
-            buttons[currentOption].color = Color.white;
-            currentOption++;
-            buttons[currentOption].GetComponent<Animation>().Play();
-            imagePos = leftBound.GetComponent<RectTransform>();
-            imagePos.localPosition = new Vector3(-xPositions[currentOption], yPositions[currentOption], 0);
-            //buttons[currentOption].transform.position = new Vector3(xPositions[currentOption], yPositions[currentOption], 0);
+        // if the Player is not in the credits, move through the menu
+        if (inCredits == false) {
+            if (Input.GetKeyDown(KeyCode.DownArrow) && currentOption < 2)
+            {
+                buttons[currentOption].GetComponent<Animation>().Stop();
+                buttons[currentOption].color = Color.white;
+                currentOption++;
+                buttons[currentOption].GetComponent<Animation>().Play();
+                moveHearts();
+                //buttons[currentOption].transform.position = new Vector3(xPositions[currentOption], yPositions[currentOption], 0);
+            }
+            else if (Input.GetKeyDown(KeyCode.UpArrow) && currentOption > 0)
+            {
+                buttons[currentOption].GetComponent<Animation>().Stop();
+                buttons[currentOption].color = Color.white;
+                currentOption--;
+                buttons[currentOption].GetComponent<Animation>().Play();
+                moveHearts();
+                //buttons[currentOption].transform.position = new Vector3(xPositions[currentOption], yPositions[currentOption], 0);
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow) && currentOption == 2 || Input.GetKeyDown(KeyCode.UpArrow) && currentOption == 0)
+            {
+                Debug.Log("can\'t go farther");
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow) && currentOption > 0)
-        {
-            buttons[currentOption].GetComponent<Animation>().Stop();
-            buttons[currentOption].color = Color.white;
-            currentOption--;
-            buttons[currentOption].GetComponent<Animation>().Play();
-            //buttons[currentOption].transform.position = new Vector3(xPositions[currentOption], yPositions[currentOption], 0);
-        }
-        else if(Input.GetKeyDown(KeyCode.DownArrow) && currentOption == 2 || Input.GetKeyDown(KeyCode.UpArrow) && currentOption == 0)
-        {
-            Debug.Log("can\'t go farther");
-        }
+        // checks for Player input
         if (Input.GetKeyDown(KeyCode.Return))
         {
             buttonPressed();
@@ -65,17 +64,50 @@ public class Menu : MonoBehaviour
     }
     void buttonPressed()
     {
+        // start the game
         if (currentOption == 0)
         {
             SceneManager.LoadScene(1);
         }
-        else if (currentOption == 1 && inCredits == false) ;)
+        // display the credits
+        else if (currentOption == 1 && inCredits == false)
         {
+            // hide the options
              for(int i = 0; i < 3; i++)
             {
-                buttons
+                buttons[i].enabled = false;
             }
+            inCredits = true;
+        }
+        // hide the credits
+        else if (currentOption == 1 && inCredits == true)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                buttons[i].enabled = true;
+            }
+            inCredits = false;
+        }
+        // close the game
+        else if (currentOption == 2)
+        {
+            Application.Quit();
         }
     }
-    
+    void moveHearts()
+    {
+        imagePos = leftBound.GetComponent<RectTransform>();
+        imagePos.localPosition = new Vector3(-xPositions[currentOption], yPositions[currentOption], 0);
+        imagePos = rightBound.GetComponent<RectTransform>();
+        imagePos.localPosition = new Vector3(xPositions[currentOption], yPositions[currentOption], 0);
+    }
+    void stopAnimation()
+    {
+
+    }
+    void startAnimation()
+    {
+
+    }
+
 }
