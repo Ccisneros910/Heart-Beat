@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public Text[] buttons = new Text[3];
-    private int[] xPositions = new int[3] {250, 100, 160};
-    private int[] yPositions = new int[3] {60, -57, -157};
+    private int[] xPositions = new int[3] { 250, 100, 160 };
+    private int[] yPositions = new int[3] { 60, -57, -157 };
     private bool inCredits = false;
     private RectTransform textPos, imagePos;
     // background effect
@@ -36,7 +36,7 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow) && currentOption<2)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && currentOption < 2)
         {
             buttons[currentOption].GetComponent<Animation>().Stop();
             buttons[currentOption].color = Color.white;
@@ -54,7 +54,7 @@ public class Menu : MonoBehaviour
             buttons[currentOption].GetComponent<Animation>().Play();
             //buttons[currentOption].transform.position = new Vector3(xPositions[currentOption], yPositions[currentOption], 0);
         }
-        else if(Input.GetKeyDown(KeyCode.DownArrow) && currentOption == 2 || Input.GetKeyDown(KeyCode.UpArrow) && currentOption == 0)
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && currentOption == 2 || Input.GetKeyDown(KeyCode.UpArrow) && currentOption == 0)
         {
             Debug.Log("can\'t go farther");
         }
@@ -71,7 +71,7 @@ public class Menu : MonoBehaviour
         }
         else if (currentOption == 1 && inCredits == false)
         {
-             for(int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
                 //buttons.
             }
