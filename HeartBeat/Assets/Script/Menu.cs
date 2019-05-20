@@ -7,6 +7,7 @@ public class Menu : MonoBehaviour
     public Text[] buttons = new Text[3];
     private int[] xPositions = new int[3] {250, 100, 160};
     private int[] yPositions = new int[3] {60, -57, -157};
+    private bool inCredits = false;
     private RectTransform textPos, imagePos;
     // background effect
     public ParticleSystem ripples;
@@ -57,19 +58,24 @@ public class Menu : MonoBehaviour
         {
             Debug.Log("can\'t go farther");
         }
-
-        void buttonPressed()
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            if(currentOption == 0)
+            buttonPressed();
+        }
+    }
+    void buttonPressed()
+    {
+        if (currentOption == 0)
+        {
+            SceneManager.LoadScene(1);
+        }
+        else if (currentOption == 1 && inCredits == false) ;)
+        {
+             for(int i = 0; i < 3; i++)
             {
-                
+                buttons
             }
         }
     }
+    
 }
-/*
-void changeTextPos()
-{
-
-}
-*/
