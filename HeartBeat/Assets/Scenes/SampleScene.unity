@@ -131,9 +131,9 @@ GameObject:
   - component: {fileID: 465007407}
   - component: {fileID: 465007406}
   - component: {fileID: 465007405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: red_dark_rectangle_1x (3)
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,6 +225,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &474317881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 474317882}
+  m_Layer: 0
+  m_Name: feetpt
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &474317882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474317881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.3158, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1974701295}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -320,9 +350,9 @@ GameObject:
   - component: {fileID: 588387737}
   - component: {fileID: 588387736}
   - component: {fileID: 588387735}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: red_dark_rectangle_1x (2)
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -426,9 +456,9 @@ GameObject:
   - component: {fileID: 1194198854}
   - component: {fileID: 1194198853}
   - component: {fileID: 1194198852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: red_dark_rectangle_1x (1)
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -444,8 +474,8 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -532,9 +562,9 @@ GameObject:
   - component: {fileID: 1400053891}
   - component: {fileID: 1400053890}
   - component: {fileID: 1400053892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: red_dark_rectangle_1x
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -660,7 +690,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 800
+  jumpForce: 20
+  feetpt: {fileID: 474317882}
+  circleRadius: 0.3
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &1974701294
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -717,9 +752,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974701292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.5, y: -2.164, z: 0}
+  m_LocalPosition: {x: -7.98, y: -2.164, z: 0}
   m_LocalScale: {x: 2.439, y: 2.439, z: 2.439}
-  m_Children: []
+  m_Children:
+  - {fileID: 474317882}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -39,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 32468089
+    locked: 0
   - name: rectangel
     uniqueID: 2327746305
     locked: 0
