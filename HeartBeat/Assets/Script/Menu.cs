@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public Text[] buttons = new Text[3];
-    private int[] xPositions = new int[3] {160, 100, 140};
-    private int[] yPositions = new int[3] {60, -57, -157};
+    private int[] xPositions = new int[3] { 160, 100, 140 };
+    private int[] yPositions = new int[3] { 60, -57, -157 };
     private bool inCredits = false;
     private RectTransform textPos, imagePos;
     // background effect
@@ -32,7 +32,8 @@ public class Menu : MonoBehaviour
     void Update()
     {
         // if the Player is not in the credits, move through the menu
-        if (inCredits == false) {
+        if (inCredits == false)
+        {
             if (Input.GetKeyDown(KeyCode.DownArrow) && currentOption < 2)
             {
                 buttons[currentOption].GetComponent<Animation>().Stop();
@@ -55,63 +56,64 @@ public class Menu : MonoBehaviour
             {
                 Debug.Log("can\'t go farther");
             }
-        // checks for Player input
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            buttonPressed();
-        }
-    }
-    void buttonPressed()
-    {
-        // start the game
-        if (currentOption == 0)
-        {
-            SceneManager.LoadScene(1);
-        }
-        // display the credits
-        else if (currentOption == 1 && inCredits == false)
-        {
-            // hide the options
-             for(int i = 0; i < 3; i++)
+            // checks for Player input
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                buttons[i].enabled = false;
+                buttonPressed();
             }
-            inCredits = true;
         }
-        // hide the credits
-        else if (currentOption == 1 && inCredits == true)
+        void buttonPressed()
         {
-            for (int i = 0; i < 3; i++)
+            // start the game
+            if (currentOption == 0)
             {
-                buttons[i].enabled = true;
+                SceneManager.LoadScene(1);
             }
-            inCredits = false;
+            // display the credits
+            else if (currentOption == 1 && inCredits == false)
+            {
+                // hide the options
+                for (int i = 0; i < 3; i++)
+                {
+                    buttons[i].enabled = false;
+                }
+                inCredits = true;
+            }
+            // hide the credits
+            else if (currentOption == 1 && inCredits == true)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    buttons[i].enabled = true;
+                }
+                inCredits = false;
+            }
+            // close the game
+            else if (currentOption == 2)
+            {
+                Application.Quit();
+            }
+            else if (currentOption == 1 && inCredits == false)
+            {
+
+            }
+
         }
-        // close the game
-        else if (currentOption == 2)
+        void moveHearts()
         {
-            Application.Quit();
+            imagePos = leftBound.GetComponent<RectTransform>();
+            imagePos.localPosition = new Vector3(-xPositions[currentOption], yPositions[currentOption], 0);
+            imagePos = rightBound.GetComponent<RectTransform>();
+            imagePos.localPosition = new Vector3(xPositions[currentOption], yPositions[currentOption], 0);
         }
-        else if (currentOption == 1 && inCredits == false)
+        void stopAnimation()
+        {
+
+        }
+        void startAnimation()
         {
 
         }
 
     }
-    void moveHearts()
-    {
-        imagePos = leftBound.GetComponent<RectTransform>();
-        imagePos.localPosition = new Vector3(-xPositions[currentOption], yPositions[currentOption], 0);
-        imagePos = rightBound.GetComponent<RectTransform>();
-        imagePos.localPosition = new Vector3(xPositions[currentOption], yPositions[currentOption], 0);
-    }
-    void stopAnimation()
-    {
-
-    }
-    void startAnimation()
-    {
-
-    }
-
 }
