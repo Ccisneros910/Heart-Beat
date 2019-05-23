@@ -6,12 +6,14 @@ public class PlayerScript : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
-    bool isJumping;
+
 
     private bool isGrounded;
     public Transform feetpt;
     public float circleRadius;
     public LayerMask whatIsGround;
+    private int jumpCount;
+    public int jumpCountResset;
 
     private Rigidbody2D rb;
 
@@ -19,47 +21,36 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        jumpCount = jumpCountResset;
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(feetpt.position, circleRadius);
-        if(isGrounded == true)
+        if (isGrounded == true)
         {
-            isJumping = false;
-            if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
-            {
-                isJumping = true;
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            }
+            jumpCount = jumpCountResset;
         }
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0)
+        {
+            rb.velocity = Vector2.up * jumpForce;
+            jumpCount--;
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && jumpCount == 0 && isGrounded == true)
+        {
+            rb.velocity = Vector2.up * jumpForce;
+        }
+
     }
-    
+
 
     void FixedUpdate()
     {
+        isGrounded = Physics2D.OverlapCircle(feetpt.position, circleRadius, whatIsGround);
+
         float move = 1;
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
     }
-
-    //void Jump()
-    //{
-    //    if(Input.GetKeyDown(KeyCode.Space) && !isJumping)
-    //    {
-    //        isJumping = true;
-
-    //       rb.AddForce(new Vector2(rb.velocity.x, jumpForce));
-    //    }
-    //}
-
-    //private void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    if (other.gameObject.CompareTag("Ground"))
-    //    {
-    //        isJumping = false;
-    //        rb.velocity = Vector2.zero;
-    //    }
-    //}
 }
+
