@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8D2C0CBEBDD2E5ED6BAA4E5 /* HvControlDelay.h in Headers */ = {isa = PBXBuildFile; fileRef = ED1AF3CDE4215E05419DE020 /* HvControlDelay.h */; };
+		1F6116C7B485E8EC7F74C9B0 /* HvTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 67577C344160AFF1A98BE611 /* HvTable.h */; };
+		24598882CDD8A1D2C8D79B2A /* HvMessagePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E6A392ADBFF734344F7AF4 /* HvMessagePool.h */; };
+		157B5DD91FEE3B73D1282D70 /* HvSignalPhasor.h in Headers */ = {isa = PBXBuildFile; fileRef = B65F2DD48DFDCE09FFC595F1 /* HvSignalPhasor.h */; };
+		E5FEE9B209FCECBB2653A832 /* Heavy_untitled_adf9e3cef0d1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2D014A6BFC55D7BEC0A58F38 /* Heavy_untitled_adf9e3cef0d1.hpp */; };
+		320507C955A8703E75682207 /* HvControlSlice.h in Headers */ = {isa = PBXBuildFile; fileRef = E78DF993C8820E0C6CB4517D /* HvControlSlice.h */; };
+		6A8C225F215710AC9A6FF722 /* HvMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 53B042FA05782FFAEC50D58B /* HvMath.h */; };
+		B6809A57D32CF957084F272D /* HeavyContextInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9868A1195820CA643BAA0A1B /* HeavyContextInterface.hpp */; };
+		E0AF212E573E3CC9291CAAEB /* HvControlSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = AB57CCCE8AE6EE15F8174895 /* HvControlSystem.h */; };
+		709A6E198CEC214B1A27C4A9 /* HvLightPipe.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C5E368FBAF2E54D2BDDA6D /* HvLightPipe.h */; };
+		D6FE1C8AAEC28B6FE64FC1AE /* HvUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F451E6A957A3ECB3F8AC0B8 /* HvUtils.h */; };
+		0F1F125CC9BC1E02A2BD7CCF /* HvControlBinop.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CEE016E2E54AD96E1A4AFE3 /* HvControlBinop.h */; };
+		B539111AF37C63C4812B1A54 /* m_pd.h in Headers */ = {isa = PBXBuildFile; fileRef = F57865CE722E1C2C9FBC85CB /* m_pd.h */; };
+		61F71CE39B996E3CD8CCECC3 /* HvControlCast.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D9F11479DC81FD5A48D9271 /* HvControlCast.h */; };
+		19BD47B5DDCD1E91A3649303 /* HvHeavy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E51038C91C7F8C29605C495 /* HvHeavy.h */; };
+		CA50596153ACC314C4DB50DF /* HvSignalVar.h in Headers */ = {isa = PBXBuildFile; fileRef = 46069C17EFFDDA5A07BEB49B /* HvSignalVar.h */; };
+		813EE65E7CA18891C8D9D64A /* HvHeavyInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 7963EBCFC2E67A7AE088404D /* HvHeavyInternal.h */; };
+		19FDA05B41EBCC958EAC7B19 /* HeavyContext.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2F46D6B6040C8190E879860D /* HeavyContext.hpp */; };
+		8CBA64CD23D93DAD1F4A060A /* HvControlVar.h in Headers */ = {isa = PBXBuildFile; fileRef = D7C3C4B80CBBF279A145D0B1 /* HvControlVar.h */; };
+		30F2D7CA2EA6DBF9722714FE /* Heavy_untitled_adf9e3cef0d1.h in Headers */ = {isa = PBXBuildFile; fileRef = DC778CFAA725AB8C15E48829 /* Heavy_untitled_adf9e3cef0d1.h */; };
+		18AF9605CEA7209B70AF7541 /* HvMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8F016157E2CF82D7EF7F46 /* HvMessage.h */; };
+		BCE2EABB7332BF60E656F1BF /* HvMessageQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 99C1606A40698F6734119AB3 /* HvMessageQueue.h */; };
+		9C00605BEAC64AB259BF7601 /* HvControlSystem.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B32EDEF188DEC66F0C521D6 /* HvControlSystem.c */; };
+		8ECE86CAD107E301AA67CCF8 /* HvMessagePool.c in Sources */ = {isa = PBXBuildFile; fileRef = 574479009B5B2ACBE6E2E90F /* HvMessagePool.c */; };
+		24F229193A03DB2B4E885766 /* HeavyContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2DE4D8563F16DBE030529A9 /* HeavyContext.cpp */; };
+		E272CCC8BB4D1CAFDD035CA6 /* HvSignalVar.c in Sources */ = {isa = PBXBuildFile; fileRef = 0EB97D280EAED44B8F57DFF1 /* HvSignalVar.c */; };
+		A10531700F5D24DC88D0720E /* HvUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 64AFFCE0BD07CDFB3EB5CF06 /* HvUtils.c */; };
+		A468DB7832130C4B9FD58185 /* HvControlSlice.c in Sources */ = {isa = PBXBuildFile; fileRef = 9ECDB82E48CDD05997E1B004 /* HvControlSlice.c */; };
+		7764B9BACD53B060CE745576 /* HvTable.c in Sources */ = {isa = PBXBuildFile; fileRef = 02C1E89B88741268A29EE503 /* HvTable.c */; };
+		4003D81DCFA9CFAEABC4924F /* HvControlVar.c in Sources */ = {isa = PBXBuildFile; fileRef = 56737F77C1D31D9834298CFD /* HvControlVar.c */; };
+		074555BD247191F17F216C39 /* untitled_adf9e3cef0d1_tilde.c in Sources */ = {isa = PBXBuildFile; fileRef = 111683DC3BC7399C67591ED6 /* untitled_adf9e3cef0d1_tilde.c */; };
+		76930517BE8FF04810682B10 /* HvControlDelay.c in Sources */ = {isa = PBXBuildFile; fileRef = EEBE43C111A94FD2BF4A64B6 /* HvControlDelay.c */; };
+		17656BA955786DC0DEF8D7B2 /* Heavy_untitled_adf9e3cef0d1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97D012492035162C082DE0CA /* Heavy_untitled_adf9e3cef0d1.cpp */; };
+		CE9FFA524C763F79CC694150 /* HvMessageQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C05428563C8ED0D3C748B5F /* HvMessageQueue.c */; };
+		F57B380CD7FFB60906DD3362 /* HvHeavy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 454F7F6845208EC973180730 /* HvHeavy.cpp */; };
+		52B75B1393CD6DE1FD4F5F0E /* HvMessage.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A8714BD23361ACEE6EE4DF6 /* HvMessage.c */; };
+		25D90D61EA7B5157046EDD5A /* HvSignalPhasor.c in Sources */ = {isa = PBXBuildFile; fileRef = 7FC2753A001FA5BD0EC207E4 /* HvSignalPhasor.c */; };
+		D39C4FCDBA5685538D4FCDDE /* HvLightPipe.c in Sources */ = {isa = PBXBuildFile; fileRef = 5CE58FA2A811A9BF79964921 /* HvLightPipe.c */; };
+		7871CE173FE09349B703ACC9 /* HvControlCast.c in Sources */ = {isa = PBXBuildFile; fileRef = CE8C319C6B070F22AF896D3D /* HvControlCast.c */; };
+		D93E61C60382DE636916E741 /* HvControlBinop.c in Sources */ = {isa = PBXBuildFile; fileRef = 9E4958191AF8A9364B0A8BDD /* HvControlBinop.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED1AF3CDE4215E05419DE020 /* HvControlDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlDelay.h; path = HvControlDelay.h; sourceTree = "<group>"; };
+		67577C344160AFF1A98BE611 /* HvTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvTable.h; path = HvTable.h; sourceTree = "<group>"; };
+		23E6A392ADBFF734344F7AF4 /* HvMessagePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvMessagePool.h; path = HvMessagePool.h; sourceTree = "<group>"; };
+		B65F2DD48DFDCE09FFC595F1 /* HvSignalPhasor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvSignalPhasor.h; path = HvSignalPhasor.h; sourceTree = "<group>"; };
+		E78DF993C8820E0C6CB4517D /* HvControlSlice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlSlice.h; path = HvControlSlice.h; sourceTree = "<group>"; };
+		53B042FA05782FFAEC50D58B /* HvMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvMath.h; path = HvMath.h; sourceTree = "<group>"; };
+		AB57CCCE8AE6EE15F8174895 /* HvControlSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlSystem.h; path = HvControlSystem.h; sourceTree = "<group>"; };
+		48C5E368FBAF2E54D2BDDA6D /* HvLightPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvLightPipe.h; path = HvLightPipe.h; sourceTree = "<group>"; };
+		0F451E6A957A3ECB3F8AC0B8 /* HvUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvUtils.h; path = HvUtils.h; sourceTree = "<group>"; };
+		7CEE016E2E54AD96E1A4AFE3 /* HvControlBinop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlBinop.h; path = HvControlBinop.h; sourceTree = "<group>"; };
+		F57865CE722E1C2C9FBC85CB /* m_pd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = m_pd.h; path = m_pd.h; sourceTree = "<group>"; };
+		6D9F11479DC81FD5A48D9271 /* HvControlCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlCast.h; path = HvControlCast.h; sourceTree = "<group>"; };
+		0E51038C91C7F8C29605C495 /* HvHeavy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvHeavy.h; path = HvHeavy.h; sourceTree = "<group>"; };
+		46069C17EFFDDA5A07BEB49B /* HvSignalVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvSignalVar.h; path = HvSignalVar.h; sourceTree = "<group>"; };
+		7963EBCFC2E67A7AE088404D /* HvHeavyInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvHeavyInternal.h; path = HvHeavyInternal.h; sourceTree = "<group>"; };
+		D7C3C4B80CBBF279A145D0B1 /* HvControlVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvControlVar.h; path = HvControlVar.h; sourceTree = "<group>"; };
+		DC778CFAA725AB8C15E48829 /* Heavy_untitled_adf9e3cef0d1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Heavy_untitled_adf9e3cef0d1.h; path = Heavy_untitled_adf9e3cef0d1.h; sourceTree = "<group>"; };
+		3B8F016157E2CF82D7EF7F46 /* HvMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvMessage.h; path = HvMessage.h; sourceTree = "<group>"; };
+		99C1606A40698F6734119AB3 /* HvMessageQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HvMessageQueue.h; path = HvMessageQueue.h; sourceTree = "<group>"; };
+		2D014A6BFC55D7BEC0A58F38 /* Heavy_untitled_adf9e3cef0d1.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Heavy_untitled_adf9e3cef0d1.hpp; path = Heavy_untitled_adf9e3cef0d1.hpp; sourceTree = "<group>"; };
+		9868A1195820CA643BAA0A1B /* HeavyContextInterface.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HeavyContextInterface.hpp; path = HeavyContextInterface.hpp; sourceTree = "<group>"; };
+		2F46D6B6040C8190E879860D /* HeavyContext.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HeavyContext.hpp; path = HeavyContext.hpp; sourceTree = "<group>"; };
+		8B32EDEF188DEC66F0C521D6 /* HvControlSystem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlSystem.c; path = HvControlSystem.c; sourceTree = "<group>"; };
+		574479009B5B2ACBE6E2E90F /* HvMessagePool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvMessagePool.c; path = HvMessagePool.c; sourceTree = "<group>"; };
+		0EB97D280EAED44B8F57DFF1 /* HvSignalVar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvSignalVar.c; path = HvSignalVar.c; sourceTree = "<group>"; };
+		64AFFCE0BD07CDFB3EB5CF06 /* HvUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvUtils.c; path = HvUtils.c; sourceTree = "<group>"; };
+		9ECDB82E48CDD05997E1B004 /* HvControlSlice.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlSlice.c; path = HvControlSlice.c; sourceTree = "<group>"; };
+		02C1E89B88741268A29EE503 /* HvTable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvTable.c; path = HvTable.c; sourceTree = "<group>"; };
+		56737F77C1D31D9834298CFD /* HvControlVar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlVar.c; path = HvControlVar.c; sourceTree = "<group>"; };
+		111683DC3BC7399C67591ED6 /* untitled_adf9e3cef0d1_tilde.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = untitled_adf9e3cef0d1_tilde.c; path = untitled_adf9e3cef0d1_tilde.c; sourceTree = "<group>"; };
+		EEBE43C111A94FD2BF4A64B6 /* HvControlDelay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlDelay.c; path = HvControlDelay.c; sourceTree = "<group>"; };
+		8C05428563C8ED0D3C748B5F /* HvMessageQueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvMessageQueue.c; path = HvMessageQueue.c; sourceTree = "<group>"; };
+		4A8714BD23361ACEE6EE4DF6 /* HvMessage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvMessage.c; path = HvMessage.c; sourceTree = "<group>"; };
+		7FC2753A001FA5BD0EC207E4 /* HvSignalPhasor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvSignalPhasor.c; path = HvSignalPhasor.c; sourceTree = "<group>"; };
+		5CE58FA2A811A9BF79964921 /* HvLightPipe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvLightPipe.c; path = HvLightPipe.c; sourceTree = "<group>"; };
+		CE8C319C6B070F22AF896D3D /* HvControlCast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlCast.c; path = HvControlCast.c; sourceTree = "<group>"; };
+		9E4958191AF8A9364B0A8BDD /* HvControlBinop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = HvControlBinop.c; path = HvControlBinop.c; sourceTree = "<group>"; };
+		C2DE4D8563F16DBE030529A9 /* HeavyContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HeavyContext.cpp; path = HeavyContext.cpp; sourceTree = "<group>"; };
+		97D012492035162C082DE0CA /* Heavy_untitled_adf9e3cef0d1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Heavy_untitled_adf9e3cef0d1.cpp; path = Heavy_untitled_adf9e3cef0d1.cpp; sourceTree = "<group>"; };
+		454F7F6845208EC973180730 /* HvHeavy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HvHeavy.cpp; path = HvHeavy.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9015B6C81B1F3D51008D7259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9015B6C21B1F3D51008D7259 = {
+			isa = PBXGroup;
+			children = (
+				9036B8681B1F3D6600B217F4 /* Source */,
+				9015B6CC1B1F3D51008D7259 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9015B6CC1B1F3D51008D7259 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9015B6CB1B1F3D51008D7259 /* HVPD_XCODE_PROJECT.pd_darwin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9036B8681B1F3D6600B217F4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				ED1AF3CDE4215E05419DE020 /* HvControlDelay.h */,
+				67577C344160AFF1A98BE611 /* HvTable.h */,
+				23E6A392ADBFF734344F7AF4 /* HvMessagePool.h */,
+				B65F2DD48DFDCE09FFC595F1 /* HvSignalPhasor.h */,
+				2D014A6BFC55D7BEC0A58F38 /* Heavy_untitled_adf9e3cef0d1.hpp */,
+				8B32EDEF188DEC66F0C521D6 /* HvControlSystem.c */,
+				574479009B5B2ACBE6E2E90F /* HvMessagePool.c */,
+				E78DF993C8820E0C6CB4517D /* HvControlSlice.h */,
+				C2DE4D8563F16DBE030529A9 /* HeavyContext.cpp */,
+				0EB97D280EAED44B8F57DFF1 /* HvSignalVar.c */,
+				64AFFCE0BD07CDFB3EB5CF06 /* HvUtils.c */,
+				53B042FA05782FFAEC50D58B /* HvMath.h */,
+				9868A1195820CA643BAA0A1B /* HeavyContextInterface.hpp */,
+				AB57CCCE8AE6EE15F8174895 /* HvControlSystem.h */,
+				9ECDB82E48CDD05997E1B004 /* HvControlSlice.c */,
+				48C5E368FBAF2E54D2BDDA6D /* HvLightPipe.h */,
+				0F451E6A957A3ECB3F8AC0B8 /* HvUtils.h */,
+				7CEE016E2E54AD96E1A4AFE3 /* HvControlBinop.h */,
+				02C1E89B88741268A29EE503 /* HvTable.c */,
+				F57865CE722E1C2C9FBC85CB /* m_pd.h */,
+				56737F77C1D31D9834298CFD /* HvControlVar.c */,
+				6D9F11479DC81FD5A48D9271 /* HvControlCast.h */,
+				0E51038C91C7F8C29605C495 /* HvHeavy.h */,
+				111683DC3BC7399C67591ED6 /* untitled_adf9e3cef0d1_tilde.c */,
+				46069C17EFFDDA5A07BEB49B /* HvSignalVar.h */,
+				7963EBCFC2E67A7AE088404D /* HvHeavyInternal.h */,
+				EEBE43C111A94FD2BF4A64B6 /* HvControlDelay.c */,
+				97D012492035162C082DE0CA /* Heavy_untitled_adf9e3cef0d1.cpp */,
+				8C05428563C8ED0D3C748B5F /* HvMessageQueue.c */,
+				454F7F6845208EC973180730 /* HvHeavy.cpp */,
+				4A8714BD23361ACEE6EE4DF6 /* HvMessage.c */,
+				2F46D6B6040C8190E879860D /* HeavyContext.hpp */,
+				D7C3C4B80CBBF279A145D0B1 /* HvControlVar.h */,
+				DC778CFAA725AB8C15E48829 /* Heavy_untitled_adf9e3cef0d1.h */,
+				7FC2753A001FA5BD0EC207E4 /* HvSignalPhasor.c */,
+				3B8F016157E2CF82D7EF7F46 /* HvMessage.h */,
+				5CE58FA2A811A9BF79964921 /* HvLightPipe.c */,
+				CE8C319C6B070F22AF896D3D /* HvControlCast.c */,
+				9E4958191AF8A9364B0A8BDD /* HvControlBinop.c */,
+				99C1606A40698F6734119AB3 /* HvMessageQueue.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9015B6C91B1F3D51008D7259 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D2C0CBEBDD2E5ED6BAA4E5 /* HvControlDelay.h in Headers */,
+				1F6116C7B485E8EC7F74C9B0 /* HvTable.h in Headers */,
+				24598882CDD8A1D2C8D79B2A /* HvMessagePool.h in Headers */,
+				157B5DD91FEE3B73D1282D70 /* HvSignalPhasor.h in Headers */,
+				E5FEE9B209FCECBB2653A832 /* Heavy_untitled_adf9e3cef0d1.hpp in Headers */,
+				320507C955A8703E75682207 /* HvControlSlice.h in Headers */,
+				6A8C225F215710AC9A6FF722 /* HvMath.h in Headers */,
+				B6809A57D32CF957084F272D /* HeavyContextInterface.hpp in Headers */,
+				E0AF212E573E3CC9291CAAEB /* HvControlSystem.h in Headers */,
+				709A6E198CEC214B1A27C4A9 /* HvLightPipe.h in Headers */,
+				D6FE1C8AAEC28B6FE64FC1AE /* HvUtils.h in Headers */,
+				0F1F125CC9BC1E02A2BD7CCF /* HvControlBinop.h in Headers */,
+				B539111AF37C63C4812B1A54 /* m_pd.h in Headers */,
+				61F71CE39B996E3CD8CCECC3 /* HvControlCast.h in Headers */,
+				19BD47B5DDCD1E91A3649303 /* HvHeavy.h in Headers */,
+				CA50596153ACC314C4DB50DF /* HvSignalVar.h in Headers */,
+				813EE65E7CA18891C8D9D64A /* HvHeavyInternal.h in Headers */,
+				19FDA05B41EBCC958EAC7B19 /* HeavyContext.hpp in Headers */,
+				8CBA64CD23D93DAD1F4A060A /* HvControlVar.h in Headers */,
+				30F2D7CA2EA6DBF9722714FE /* Heavy_untitled_adf9e3cef0d1.h in Headers */,
+				18AF9605CEA7209B70AF7541 /* HvMessage.h in Headers */,
+				BCE2EABB7332BF60E656F1BF /* HvMessageQueue.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9015B6CA1B1F3D51008D7259 /* untitled_adf9e3cef0d1~ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9015B6CF1B1F3D51008D7259 /* Build configuration list for PBXNativeTarget "untitled_adf9e3cef0d1~" */;
+			buildPhases = (
+				9015B6C71B1F3D51008D7259 /* Sources */,
+				9015B6C81B1F3D51008D7259 /* Frameworks */,
+				9015B6C91B1F3D51008D7259 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "untitled_adf9e3cef0d1~";
+			productName = HVPD_XCODE_PROJECT;
+			productReference = 9015B6CB1B1F3D51008D7259 /* HVPD_XCODE_PROJECT.pd_darwin */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9015B6C31B1F3D51008D7259 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Enzien Audio, Ltd.";
+				TargetAttributes = {
+					9015B6CA1B1F3D51008D7259 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 9015B6C61B1F3D51008D7259 /* Build configuration list for PBXProject "HVPD_XCODE_PROJECT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9015B6C21B1F3D51008D7259;
+			productRefGroup = 9015B6CC1B1F3D51008D7259 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9015B6CA1B1F3D51008D7259 /* untitled_adf9e3cef0d1~ */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9015B6C71B1F3D51008D7259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C00605BEAC64AB259BF7601 /* HvControlSystem.c in Sources */,
+				8ECE86CAD107E301AA67CCF8 /* HvMessagePool.c in Sources */,
+				24F229193A03DB2B4E885766 /* HeavyContext.cpp in Sources */,
+				E272CCC8BB4D1CAFDD035CA6 /* HvSignalVar.c in Sources */,
+				A10531700F5D24DC88D0720E /* HvUtils.c in Sources */,
+				A468DB7832130C4B9FD58185 /* HvControlSlice.c in Sources */,
+				7764B9BACD53B060CE745576 /* HvTable.c in Sources */,
+				4003D81DCFA9CFAEABC4924F /* HvControlVar.c in Sources */,
+				074555BD247191F17F216C39 /* untitled_adf9e3cef0d1_tilde.c in Sources */,
+				76930517BE8FF04810682B10 /* HvControlDelay.c in Sources */,
+				17656BA955786DC0DEF8D7B2 /* Heavy_untitled_adf9e3cef0d1.cpp in Sources */,
+				CE9FFA524C763F79CC694150 /* HvMessageQueue.c in Sources */,
+				F57B380CD7FFB60906DD3362 /* HvHeavy.cpp in Sources */,
+				52B75B1393CD6DE1FD4F5F0E /* HvMessage.c in Sources */,
+				25D90D61EA7B5157046EDD5A /* HvSignalPhasor.c in Sources */,
+				D39C4FCDBA5685538D4FCDDE /* HvLightPipe.c in Sources */,
+				7871CE173FE09349B703ACC9 /* HvControlCast.c in Sources */,
+				D93E61C60382DE636916E741 /* HvControlBinop.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9015B6CD1B1F3D51008D7259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-Wno-#warnings -Wno-unused-function";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9015B6CE1B1F3D51008D7259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-ffast-math",
+					"-msse4.2",
+					"-Wno-#warnings",
+					"-Wno-unused-function",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9015B6D01B1F3D51008D7259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = pd_darwin;
+				EXECUTABLE_PREFIX = "";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9015B6D11B1F3D51008D7259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = pd_darwin;
+				EXECUTABLE_PREFIX = "";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9015B6C61B1F3D51008D7259 /* Build configuration list for PBXProject "HVPD_XCODE_PROJECT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9015B6CD1B1F3D51008D7259 /* Debug */,
+				9015B6CE1B1F3D51008D7259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9015B6CF1B1F3D51008D7259 /* Build configuration list for PBXNativeTarget "untitled_adf9e3cef0d1~" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9015B6D01B1F3D51008D7259 /* Debug */,
+				9015B6D11B1F3D51008D7259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9015B6C31B1F3D51008D7259 /* Project object */;
+}
