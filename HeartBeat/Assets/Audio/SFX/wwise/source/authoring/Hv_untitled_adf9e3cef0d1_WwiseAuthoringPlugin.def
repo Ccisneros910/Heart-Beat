@@ -1,6 +1,0 @@
-; Hv_untitled_adf9e3cef0d1_WwiseSourceAuthPlugin.def : Declares the module parameters for the DLL.
-
-LIBRARY      "Hv_untitled_adf9e3cef0d1_WwiseSourceAuthPlugin"
-
-EXPORTS
-    AkCreatePlugin

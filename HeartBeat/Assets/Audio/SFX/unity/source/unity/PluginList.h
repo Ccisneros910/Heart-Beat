@@ -1,1 +1,0 @@
-DECLARE_EFFECT("untitled_adf9e3cef0d1", Hv_untitled_adf9e3cef0d1_UnityPlugin)

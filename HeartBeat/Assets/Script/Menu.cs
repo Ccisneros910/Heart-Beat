@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public Text[] buttons = new Text[3];
-    private int[] xPositions = new int[3] { 160, 100, 140 };
-    private int[] yPositions = new int[3] { 60, -57, -157 };
+    private int[] xPositions = new int[3] { 140, 90, 130 };
+    private int[] yPositions = new int[3] { 60, -40, -120};
     private bool inCredits = false;
     private RectTransform textPos, imagePos;
     // background effect
