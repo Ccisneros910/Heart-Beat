@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public Text[] buttons = new Text[3];
-    private int[] xPositions = new int[3] { 160, 100, 140 };
-    private int[] yPositions = new int[3] { 60, -57, -157 };
+    private int[] xPositions = new int[3] { 140, 90, 130 };
+    private int[] yPositions = new int[3] { 60, -40, -120};
     private bool inCredits = false;
     private RectTransform textPos, imagePos;
     // background effect
@@ -14,18 +14,36 @@ public class Menu : MonoBehaviour
     // heart sprites on side of selected option
     public Image leftBound, rightBound;
     private int currentOption;
+    // Pure Data
+    public Text countText;
+    //private Hv_untitled_2d02fb5c0bb6_AudioLib pd;
+    private Hv_heartbeatHeavy_AudioLib pd;
+    public AudioClip _clip;
 
     void Start()
     {
-        /*buttons[0] = start;
-        buttons[1] = credits;
-        buttons[2] = quit;
-        */
+        // Selecting an option
         currentOption = 0;
         textPos = buttons[currentOption].GetComponent<RectTransform>();
         Debug.Log(textPos.localPosition);
         buttons[currentOption].GetComponent<Animation>().Play();
         Debug.Log(textPos.localPosition);
+
+        //Initialize Heavy Library here
+        pd = GetComponent<Hv_heartbeatHeavy_AudioLib>();
+        pd.SendEvent(Hv_heartbeatHeavy_AudioLib.Event.Bang);
+        pd.FillTableWithMonoAudioClip("PD", _clip);
+
+        // set up to receive messages from the PD patch
+        pd.RegisterSendHook();
+        pd.FloatReceivedCallback += OnFloatMessage;
+    }
+    
+    void OnFloatMessage(Hv_heartbeatHeavy_AudioLib.FloatMessage message)
+    {
+        Debug.Log(message.receiverName + ": " + message.value);
+
+        countText.text = message.value.ToString();
     }
 
     // Update is called once per frame
