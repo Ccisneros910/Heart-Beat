@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - yellowGround
   layers:
   - Default
   - TransparentFX
@@ -14,10 +15,10 @@ TagManager:
   - UI
   - 
   - 
+  - Player
   - Ground
   - 
-  - Player
-  - 
+  - Backgournd
   - 
   - 
   - 

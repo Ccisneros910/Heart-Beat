@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -41,6 +42,11 @@ public class PlayerScript : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
 
+        //if(rb.position.y < -10)
+        //{
+            //SeceneManager.LoadScene(2);
+        //}
+
     }
 
 
@@ -52,5 +58,7 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
     }
+
+   
 }
 
