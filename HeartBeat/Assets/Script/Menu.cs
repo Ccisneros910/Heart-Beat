@@ -21,7 +21,8 @@ public class Menu : MonoBehaviour
     public AudioClip _clip;
 
     void Start()
-    {/*
+    {
+        // Selecting an option
         currentOption = 0;
         textPos = buttons[currentOption].GetComponent<RectTransform>();
         Debug.Log(textPos.localPosition);
@@ -29,17 +30,16 @@ public class Menu : MonoBehaviour
         Debug.Log(textPos.localPosition);
 
         //Initialize Heavy Library here
-        pd = GetComponent<Hv_untitled_2d02fb5c0bb6_AudioLib>();
-
+        pd = GetComponent<Hv_heartbeatHeavy_AudioLib>();
+        pd.SendEvent(Hv_heartbeatHeavy_AudioLib.Event.Bang);
         pd.FillTableWithMonoAudioClip("PD", _clip);
 
         // set up to receive messages from the PD patch
         pd.RegisterSendHook();
         pd.FloatReceivedCallback += OnFloatMessage;
-        */
     }
     
-    void OnFloatMessage(Hv_untitled_2d02fb5c0bb6_AudioLib.FloatMessage message)
+    void OnFloatMessage(Hv_heartbeatHeavy_AudioLib.FloatMessage message)
     {
         Debug.Log(message.receiverName + ": " + message.value);
 
