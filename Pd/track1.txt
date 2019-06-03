@@ -1,0 +1,8 @@
+0 horn 1;0 bass 1;0 flute 1;250 horn 2; 0 flute 2;250 horn 3;0 bass 4;0 flute 3;
+500 horn 5;0 flute 5;0 bass 1;500 horn 8;0 bass 4;0 flute 8;
+500 bass 1;250 horn 7;0 flute 7;250 bass 4;
+500 horn 6;0 bass 1;0 flute 6;250 horn 5;0 flute 5;250 horn 6; 0 bass 4;0 flute 6;250 horn 5;0 flute 5;250 bass 1;
+0 horn 1;0 bass 1;0 flute 1;250 horn 2; 0 flute 2;250 horn 3;0 bass 4;0 flute 3;
+500 horn 5;0 flute 5;0 bass 1;500 horn 8;0 bass 4;0 flute 8;
+500 bass 1;250 horn 7;0 flute 7;250 bass 4;
+500 horn 6;0 bass 1;0 flute 6;250 horn 5;0 flute 5;250 horn 6; 0 bass 4;0 flute 6;250 horn 5;0 flute 5;250 bass 1;
