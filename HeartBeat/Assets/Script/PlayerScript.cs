@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
-
-    //bool isJumping;
 
     private bool isGrounded;
     public Transform feetpt;
@@ -28,7 +27,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Update()
     {
-        if(isGrounded == true)
+        if (isGrounded == true)
         {
             jumpCount = jumpCountResset;
         }
@@ -36,11 +35,15 @@ public class PlayerScript : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
             jumpCount--;
-        }else if(Input.GetKeyDown(KeyCode.Space) && jumpCount == 0 && isGrounded == true)
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && jumpCount == 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpForce;
         }
-
+        //if(rb.position.y < -10)
+        //{
+            //SeceneManager.LoadScene(2);
+        //}
     }
 
 
@@ -53,3 +56,4 @@ public class PlayerScript : MonoBehaviour
 
     }
 }
+
