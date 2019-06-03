@@ -14,6 +14,10 @@ public class Menu : MonoBehaviour
     // heart sprites on side of selected option
     public Image leftBound, rightBound;
     private int currentOption;
+    // Pure Data
+    public Text countText;
+    private Hv_untitled_2d02fb5c0bb6_AudioLib pd;
+    public AudioClip _clip;
 
     void Start()
     {
@@ -26,6 +30,22 @@ public class Menu : MonoBehaviour
         Debug.Log(textPos.localPosition);
         buttons[currentOption].GetComponent<Animation>().Play();
         Debug.Log(textPos.localPosition);
+
+        //Initialize Heavy Library here
+        pd = GetComponent<Hv_untitled_2d02fb5c0bb6_AudioLib>();
+
+        pd.FillTableWithMonoAudioClip("PD", _clip);
+
+        // set up to receive messages from the PD patch
+        pd.RegisterSendHook();
+        pd.FloatReceivedCallback += OnFloatMessage;
+    }
+    
+    void OnFloatMessage(Hv_untitled_2d02fb5c0bb6_AudioLib.FloatMessage message)
+    {
+        Debug.Log(message.receiverName + ": " + message.value);
+
+        countText.text = message.value.ToString();
     }
 
     // Update is called once per frame
