@@ -13,7 +13,7 @@ public class yellowRectangleScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("yellowGround!!!");
-            isPlayer = true;
+            isPlayer = true; //true when player hit the ground(rectangle)
         }
     }
 
@@ -22,7 +22,7 @@ public class yellowRectangleScript : MonoBehaviour
     {
         if(isPlayer == true)
         {
-            animator.SetBool("IsPlayer", true);
+            animator.SetBool("IsPlayer", true); //switch to lightUp animation
         }
     }
 }
