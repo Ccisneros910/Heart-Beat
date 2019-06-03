@@ -16,15 +16,12 @@ public class Menu : MonoBehaviour
     private int currentOption;
     // Pure Data
     public Text countText;
-    private Hv_untitled_2d02fb5c0bb6_AudioLib pd;
+    //private Hv_untitled_2d02fb5c0bb6_AudioLib pd;
+    private Hv_heartbeatHeavy_AudioLib pd;
     public AudioClip _clip;
 
     void Start()
-    {
-        /*buttons[0] = start;
-        buttons[1] = credits;
-        buttons[2] = quit;
-        */
+    {/*
         currentOption = 0;
         textPos = buttons[currentOption].GetComponent<RectTransform>();
         Debug.Log(textPos.localPosition);
@@ -39,6 +36,7 @@ public class Menu : MonoBehaviour
         // set up to receive messages from the PD patch
         pd.RegisterSendHook();
         pd.FloatReceivedCallback += OnFloatMessage;
+        */
     }
     
     void OnFloatMessage(Hv_untitled_2d02fb5c0bb6_AudioLib.FloatMessage message)
