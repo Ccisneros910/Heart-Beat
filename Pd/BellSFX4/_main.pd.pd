@@ -1,4 +1,4 @@
-#N canvas 517 87 343 471 10;
+#N canvas 517 87 924 812 10;
 #X obj 179 319 dac~;
 #X obj 174 225 osc~;
 #X obj 305 204 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -28,6 +28,7 @@
 #X msg 269 147 130;
 #X msg 196 10 100;
 #X obj 179 284 *~ 0.3;
+#X obj 313 101 r bang @hv_event;
 #X connect 1 0 5 0;
 #X connect 2 0 5 1;
 #X connect 2 0 12 0;
@@ -45,3 +46,4 @@
 #X connect 13 0 6 0;
 #X connect 14 0 0 0;
 #X connect 14 0 0 1;
+#X connect 15 0 2 0;
