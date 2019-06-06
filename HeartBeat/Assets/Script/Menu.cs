@@ -16,9 +16,17 @@ public class Menu : MonoBehaviour
     private int currentOption;
     // Pure Data
     public Text countText;
-    //private Hv_untitled_2d02fb5c0bb6_AudioLib pd;
     private Hv_heartbeatHeavy_AudioLib pd;
     public AudioClip _clip;
+
+    IEnumerator playHB()
+    {
+        while (true)
+        {
+            yield return new WaitForSecondsRealtime(1.0f);
+            pd.SendEvent(Hv_heartbeatHeavy_AudioLib.Event.Bang);
+        }
+    }
 
     void Start()
     {
@@ -32,11 +40,13 @@ public class Menu : MonoBehaviour
         //Initialize Heavy Library here
         pd = GetComponent<Hv_heartbeatHeavy_AudioLib>();
         pd.SendEvent(Hv_heartbeatHeavy_AudioLib.Event.Bang);
-        pd.FillTableWithMonoAudioClip("PD", _clip);
+        //pd.FillTableWithMonoAudioClip("PD", _clip);
+        // need this? ^ 
 
         // set up to receive messages from the PD patch
-        pd.RegisterSendHook();
-        pd.FloatReceivedCallback += OnFloatMessage;
+        //pd.RegisterSendHook();
+        //pd.FloatReceivedCallback += OnFloatMessage;
+        StartCoroutine(playHB());
     }
     
     void OnFloatMessage(Hv_heartbeatHeavy_AudioLib.FloatMessage message)
@@ -115,7 +125,6 @@ public class Menu : MonoBehaviour
             {
 
             }
-
         }
         void moveHearts()
         {
@@ -132,6 +141,5 @@ public class Menu : MonoBehaviour
         {
 
         }
-
     }
 }

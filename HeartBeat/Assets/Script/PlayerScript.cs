@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
@@ -15,6 +14,14 @@ public class PlayerScript : MonoBehaviour
     private int jumpCount;
     public int jumpCountResset;
 
+    // Bell SFX
+    private GameObject bell;
+    private Hv_BellSFX1_AudioLib bell1;
+    private Hv_BellSFX2_AudioLib bell2;
+    private Hv_BellSFX3_AudioLib bell3;
+    private Hv_BellSFX4_AudioLib bell4;
+    public Text countText;
+
     private Rigidbody2D rb;
 
 
@@ -23,6 +30,32 @@ public class PlayerScript : MonoBehaviour
     {
         jumpCount = jumpCountResset;
         rb = GetComponent<Rigidbody2D>();
+
+        // Initialize all of the bell sounds
+        //Initialize Heavy Library here
+        bell = GetComponent<GameObject>();
+            //GameObject.Find("/Player/bell1")
+        //bell1 = GetComponent<Hv_BellSFX1_AudioLib>();
+        //bell1.SendEvent(Hv_BellSFX1_AudioLib.Event.Bang);
+        //bell2 = GetComponent<Hv_BellSFX2_AudioLib>();
+        //bell2.SendEvent(Hv_BellSFX2_AudioLib.Event.Bang);
+        //bell3 = GetComponent<Hv_BellSFX3_AudioLib>();
+        //bell3.SendEvent(Hv_BellSFX3_AudioLib.Event.Bang);
+        //bell4 = GetComponent<Hv_BellSFX4_AudioLib>();
+        //bell4.SendEvent(Hv_BellSFX4_AudioLib.Event.Bang);
+        //pd.FillTableWithMonoAudioClip("PD", _clip);
+        // need this? ^ 
+
+        // set up to receive messages from the PD patch
+        //bell1.RegisterSendHook();
+        //bell1.FloatReceivedCallback += OnFloatMessage;
+    }
+
+    void OnFloatMessage(Hv_BellSFX1_AudioLib.FloatMessage message)
+    {
+        Debug.Log(message.receiverName + ": " + message.value);
+
+        countText.text = message.value.ToString();
     }
 
     private void Update()
@@ -38,12 +71,13 @@ public class PlayerScript : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Space) && jumpCount == 0 && isGrounded == true)
         {
+            bell.playNote();
             rb.velocity = Vector2.up * jumpForce;
         }
-        //if(rb.position.y < -10)
-        //{
-            //SeceneManager.LoadScene(2);
-        //}
+        if(rb.position.y < -10)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 
 
