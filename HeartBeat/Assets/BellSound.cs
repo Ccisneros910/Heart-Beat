@@ -20,7 +20,7 @@ public class BellSound : MonoBehaviour
         playSound = PlayerScript.hitNote;
         if (playSound == true)
         {
-
+            playNote();
         }
     }
 

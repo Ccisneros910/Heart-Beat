@@ -74,7 +74,6 @@ public class PlayerScript : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Space) && jumpCount == 0 && isGrounded == true)
         {
-            bell.playNote();
             rb.velocity = Vector2.up * jumpForce;
         }
         if(rb.position.y < -10)
