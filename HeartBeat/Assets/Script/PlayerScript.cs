@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Assertions;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerScript : MonoBehaviour
     public float jumpForce;
 
     private bool isGrounded;
+    public static bool hitNote = false;
     public Transform feetpt;
     public float circleRadius;
     public LayerMask whatIsGround;
@@ -33,8 +35,9 @@ public class PlayerScript : MonoBehaviour
 
         // Initialize all of the bell sounds
         //Initialize Heavy Library here
-        bell = GetComponent<GameObject>();
-            //GameObject.Find("/Player/bell1")
+        bell = GameObject.Find("/Player/bell1");
+        Assert.AreNotEqual(bell, null);
+        //GameObject.Find("/Player/bell1")
         //bell1 = GetComponent<Hv_BellSFX1_AudioLib>();
         //bell1.SendEvent(Hv_BellSFX1_AudioLib.Event.Bang);
         //bell2 = GetComponent<Hv_BellSFX2_AudioLib>();
@@ -78,6 +81,7 @@ public class PlayerScript : MonoBehaviour
         {
             SceneManager.LoadScene(2);
         }
+        hitNote = false;
     }
 
 
@@ -89,5 +93,10 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        hitNote = true;
+        Debug.Log("Note Hit!");
+    }
 }
-
+   
