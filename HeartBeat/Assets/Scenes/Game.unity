@@ -791,7 +791,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
-  jumpCountResset: 0
+  jumpTime: 0.35
 --- !u!212 &1974701294
 SpriteRenderer:
   m_ObjectHideFlags: 0

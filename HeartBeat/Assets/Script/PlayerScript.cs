@@ -13,8 +13,10 @@ public class PlayerScript : MonoBehaviour
     public Transform feetpt; //an empty object is used to check is grounded
     public float circleRadius; //the radius of circle(feetpt)
     public LayerMask whatIsGround; //check which layer is ground
-    private int jumpCount; //jump counting
-    public int jumpCountResset; //limited number of times for jumping
+
+    public float jumpTime; //how high the player can jump when holding space key
+    private bool isJumping;
+    private float jumpTimeCounter;
 
     private Rigidbody2D rb;
 
@@ -22,29 +24,36 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        jumpCount = jumpCountResset;
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        if (isGrounded == true)
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
-            jumpCount = jumpCountResset; //reset jumpCount when hit the ground
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0)
-        { //able to jump more than one if jumpCountResset > 0
-            rb.velocity = Vector2.up * jumpForce;
-            jumpCount--; //stop jumping if jumpCount equals to 0 and player not on the ground
+        if (isJumping == true && Input.GetKey(KeyCode.Space))
+        {
+            if (jumpTimeCounter > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else if (jumpTimeCounter < 0)
+            {
+                isJumping = false;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && jumpCount == 0 && isGrounded == true)
-        { //allow jumping if player hit the ground
-            rb.velocity = Vector2.up * jumpForce;
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            isJumping = false;
         }
-
         //if(rb.position.y < -10)
         //{
-            //SeceneManager.LoadScene(2);
+        //SeceneManager.LoadScene(2);
         //}
 
     }
