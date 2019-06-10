@@ -20,19 +20,19 @@ public class BellSound : MonoBehaviour
     {
         if (PlayerScript.noteHeight == 0)
         {
-            frequency = 60;
+            frequency = 90;
         }
         else if (PlayerScript.noteHeight == 1)
         {
-            frequency = 65;
+            frequency = 93;
         }
         else if (PlayerScript.noteHeight == 2)
         {
-            frequency = 68;
+            frequency = 95;
         }
         else if (PlayerScript.noteHeight == 3)
         {
-            frequency = 70;
+            frequency = 98;
         }
         Debug.Log("Frequence: " + frequency);
         note.SetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency, frequency);
