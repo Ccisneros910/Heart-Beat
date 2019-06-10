@@ -38,6 +38,7 @@ public class PlayerScript : MonoBehaviour
         hitNote = false;
     }
 
+
     private void Update()
     {
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
