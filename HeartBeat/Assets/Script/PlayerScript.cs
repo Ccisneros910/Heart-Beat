@@ -22,7 +22,7 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rb;
 
     // Used by BellSound.cs
-    public static bool hitNote = false;
+    public static bool hitNote;
     private Vector2 notePlace;
     public static float noteHeight;
 
@@ -30,6 +30,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        hitNote = false;
     }
 
     private void Update()
@@ -42,7 +43,7 @@ public class PlayerScript : MonoBehaviour
         }
         if(isJumping == true && Input.GetKey(KeyCode.Space))
         {
-            if(jumpTimeCounter > 0)
+            if (jumpTimeCounter > 0)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 jumpTimeCounter -= Time.deltaTime;
@@ -60,7 +61,11 @@ public class PlayerScript : MonoBehaviour
         {
             SceneManager.LoadScene(2);
         }
-        hitNote = false;
+        if(hitNote == true)
+        {
+            hitNote = false;
+        }
+        
     }
 
     void FixedUpdate()
@@ -76,8 +81,9 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "yellowGround")
         {
             hitNote = true;
+            //Debug.Log("Collision: " + hitNote);
             noteHeight = collision.gameObject.transform.position.y;
-            Debug.Log("Note Hit! Position: " + noteHeight);
+            //Debug.Log("Note Hit! Position: " + noteHeight);
         }
     }
 }
