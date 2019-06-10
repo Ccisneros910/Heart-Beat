@@ -217,7 +217,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &19943152
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -278,7 +281,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 18
+=======
+  m_RootOrder: 20
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &92542672
 GameObject:
@@ -377,7 +384,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &92542677
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -438,7 +448,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 28
+=======
+  m_RootOrder: 30
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &99478323
 GameObject:
@@ -519,6 +533,7 @@ Transform:
   m_Father: {fileID: 519420032}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &109849320
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,6 +612,8 @@ CircleCollider2D:
   m_Offset: {x: 0.03, y: -0.118}
   serializedVersion: 2
   m_Radius: 0.2
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!1 &137146135
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +711,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &137146140
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -755,7 +775,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 24
+=======
+  m_RootOrder: 26
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &142294262
 GameObject:
@@ -854,7 +878,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &142294267
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -915,7 +942,118 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 29
+=======
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &159699203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776291744}
+  - component: {fileID: 776291746}
+  - component: {fileID: 776291745}
+  - component: {fileID: 776291747}
+  m_Layer: 8
+  m_Name: bell1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &159699204
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159699203}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 1}
+    newSize: {x: 3, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &159699205
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159699203}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1967220991
+  m_SortingLayer: -2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 7cc93ee69a351cb45b299a8348ccc493, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &159699206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159699203}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 68, y: -2, z: 0}
+  m_LocalScale: {x: 10, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &218758711
 GameObject:
@@ -1014,7 +1152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &218758716
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1075,7 +1216,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 30
+=======
+  m_RootOrder: 32
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &269320402
 GameObject:
@@ -1174,7 +1319,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &269320407
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1235,7 +1383,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 25
+=======
+  m_RootOrder: 27
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &290043372
 GameObject:
@@ -1334,7 +1486,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &290043377
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1395,7 +1550,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 32
+=======
+  m_RootOrder: 34
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &362856488
 GameObject:
@@ -1494,7 +1653,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 362856491}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &362856493
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1654,7 +1816,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &387502083
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1715,7 +1880,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 20
+=======
+  m_RootOrder: 22
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &418286245
 GameObject:
@@ -1852,7 +2021,11 @@ Transform:
   m_LocalScale: {x: 12, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 40
+=======
+  m_RootOrder: 18
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &461749836
 GameObject:
@@ -1951,7 +2124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &461749841
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2012,7 +2188,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 31
+=======
+  m_RootOrder: 33
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!251 &465007408
 PlatformEffector2D:
@@ -2042,7 +2222,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 474317882}
-  - component: {fileID: 474317883}
   m_Layer: 8
   m_Name: feetpt
   m_TagString: Untagged
@@ -2061,9 +2240,10 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.3158, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 776291744}
+  m_Father: {fileID: 1974701295}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!61 &474317883
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2090,6 +2270,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32863715, y: 0.23024774}
   m_EdgeRadius: 0
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!1 &477900228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,7 +2369,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &477900233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2248,6 +2433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &479476889
@@ -2404,6 +2590,10 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!1 &480948329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,7 +2691,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &480948334
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2562,7 +2755,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 19
+=======
+  m_RootOrder: 21
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -2758,7 +2955,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &562307051
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2819,7 +3019,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 39
+=======
+  m_RootOrder: 41
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!251 &588387738
 PlatformEffector2D:
@@ -2937,7 +3141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &689250319
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2998,6 +3205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &765732362
@@ -3046,6 +3254,9 @@ Transform:
   - {fileID: 479476890}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+=======
+  m_RootOrder: 28
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &791041955
 GameObject:
@@ -3175,7 +3386,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &814175344
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3236,7 +3450,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 21
+=======
+  m_RootOrder: 23
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &857039701
 GameObject:
@@ -3335,7 +3553,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &857039706
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3396,7 +3617,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 38
+=======
+  m_RootOrder: 40
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &882034676
 GameObject:
@@ -3495,7 +3720,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &882034681
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3556,7 +3784,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 37
+=======
+  m_RootOrder: 39
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &888359066
 GameObject:
@@ -3655,7 +3887,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &888359071
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3716,7 +3951,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &901643691
 GameObject:
@@ -3815,7 +4050,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &901643696
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3876,7 +4114,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 36
+=======
+  m_RootOrder: 38
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1049378379
 GameObject:
@@ -3975,7 +4217,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &1049378384
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4036,7 +4281,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 27
+=======
+  m_RootOrder: 29
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1077895231
 GameObject:
@@ -4135,7 +4384,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &1077895236
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4196,7 +4448,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 34
+=======
+  m_RootOrder: 36
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1094439978
 GameObject:
@@ -4552,7 +4808,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 362856491}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &1219273991
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4712,7 +4971,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 1257993925}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &1257993927
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5059,7 +5321,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &1449333100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5120,7 +5385,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1504883686
 GameObject:
@@ -5219,7 +5484,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 1504883689}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &1504883691
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5379,7 +5647,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &1607750916
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5440,7 +5711,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 23
+=======
+  m_RootOrder: 25
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1720182923
 GameObject:
@@ -5539,7 +5814,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &1720182928
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5600,7 +5878,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 35
+=======
+  m_RootOrder: 37
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1906996143
 GameObject:
@@ -5699,7 +5981,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &1906996148
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5760,7 +6045,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1912716410
 GameObject:
@@ -5859,7 +6144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 362856491}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &1912716415
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6179,7 +6467,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &1959360079
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6240,15 +6531,38 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 22
+=======
+  m_RootOrder: 24
+>>>>>>> parent of da3e481... Sound activation and merge fixes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1974701292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776291744}
+  - component: {fileID: 776291747}
+  - component: {fileID: 776291746}
+  - component: {fileID: 776291745}
+  m_Layer: 8
+  m_Name: Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!212 &1974701294
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109849320}
+  m_GameObject: {fileID: 1974701292}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -6290,6 +6604,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1974701295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974701292}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8, y: -0.7, z: 0}
+  m_LocalScale: {x: 2.439, y: 2.439, z: 2.439}
+  m_Children:
+  - {fileID: 474317882}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1974701296
 Rigidbody2D:
   serializedVersion: 4
@@ -6297,20 +6626,144 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765732362}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776291744}
+  - component: {fileID: 776291746}
+  - component: {fileID: 776291747}
+  - component: {fileID: 776291745}
+  m_Layer: 8
+  m_Name: bell1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &776291744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974701292}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03, y: -0.118}
+  serializedVersion: 2
+  m_Radius: 0.2
+--- !u!114 &1974701298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974701292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5049eb3ec682b934a9be6700506822d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 200
+--- !u!82 &776291746
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974701292}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2006146561
 GameObject:
   m_ObjectHideFlags: 0
@@ -6408,7 +6861,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &2006146566
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6469,7 +6925,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2043494925
 GameObject:
@@ -6568,7 +7024,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 362856491}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &2043494930
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6728,7 +7187,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 19943150}
+=======
+>>>>>>> parent of da3e481... Sound activation and merge fixes
 --- !u!212 &2050007303
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6789,5 +7251,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of da3e481... Sound activation and merge fixes
