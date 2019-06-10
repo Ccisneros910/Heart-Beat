@@ -72,7 +72,6 @@ public class PlayerScript : MonoBehaviour
 >>>>>>> parent of da3e481... Sound activation and merge fixes
     }
 
-
     private void Update()
     {
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
