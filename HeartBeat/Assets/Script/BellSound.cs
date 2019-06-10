@@ -6,6 +6,7 @@ public class BellSound : MonoBehaviour
 {
     private Hv_bell_fin_AudioLib note;
     private static bool playSound;
+    public static float frequency;
 
     // Start is called before the first frame update
     void Start()

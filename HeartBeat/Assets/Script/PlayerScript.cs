@@ -22,7 +22,6 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rb;
 
     // Used by BellSound.cs
-    public static bool hitNote;
     private Vector2 notePlace;
     public static float noteHeight;
 
@@ -33,41 +32,7 @@ public class PlayerScript : MonoBehaviour
         jumpCount = jumpCountResset;
         rb = GetComponent<Rigidbody2D>();
         hitNote = false;
-
-        // Initialize all of the bell sounds
-        //Initialize Heavy Library here
-        //bell = GameObject.Find("/Player/bell1");
-        //Assert.AreNotEqual(bell, null);
-        //GameObject.Find("/Player/bell1")
-        //bell1 = GetComponent<Hv_BellSFX1_AudioLib>();
-        //bell1.SendEvent(Hv_BellSFX1_AudioLib.Event.Bang);
-        //bell2 = GetComponent<Hv_BellSFX2_AudioLib>();
-        //bell2.SendEvent(Hv_BellSFX2_AudioLib.Event.Bang);
-        //bell3 = GetComponent<Hv_BellSFX3_AudioLib>();
-        //bell3.SendEvent(Hv_BellSFX3_AudioLib.Event.Bang);
-        //bell4 = GetComponent<Hv_BellSFX4_AudioLib>();
-        //bell4.SendEvent(Hv_BellSFX4_AudioLib.Event.Bang);
-        //pd.FillTableWithMonoAudioClip("PD", _clip);
-        // need this? ^ 
-
-        // set up to receive messages from the PD patch
-        //bell1.RegisterSendHook();
-        //bell1.FloatReceivedCallback += OnFloatMessage;
     }
-
-    void OnFloatMessage(Hv_BellSFX1_AudioLib.FloatMessage message)
-    {
-        Debug.Log(message.receiverName + ": " + message.value);
-
-        countText.text = message.value.ToString();
-    }
-
-    // void OnFloatMessage(Hv_BellSFX1_AudioLib.FloatMessage message)
-    // {
-        // Debug.Log(message.receiverName + ": " + message.value);
-
-        // countText.text = message.value.ToString();
-    // }
 
     private void Update()
     {
@@ -101,9 +66,6 @@ public class PlayerScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        hitNote = true;
-        Debug.Log("Note Hit!");
-
         if (collision.gameObject.tag == "yellowGround")
         {
             hitNote = true;
@@ -111,9 +73,6 @@ public class PlayerScript : MonoBehaviour
             noteHeight = collision.gameObject.transform.position.y;
             //Debug.Log("Note Hit! Position: " + noteHeight);
         }
-
-        hitNote = true;
-        Debug.Log("Note Hit!");
     }
 }
    
