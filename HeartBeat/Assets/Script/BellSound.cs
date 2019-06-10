@@ -44,11 +44,12 @@ public class BellSound : MonoBehaviour
     void Update()
     {
         playSound = PlayerScript.hitNote;
-        Debug.Log("hitNote: " + PlayerScript.hitNote);
-        Debug.Log("Playsound: " + playSound);
+        //Debug.Log("hitNote: " + PlayerScript.hitNote);
+        //Debug.Log("Playsound: " + playSound);
         if (playSound == true) {
-            Debug.Log("frequency: " + note.GetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency));
+            //Debug.Log("frequency: " + note.GetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency));
             playNote();
         }
+        PlayerScript.hitNote = false;
     }
 }

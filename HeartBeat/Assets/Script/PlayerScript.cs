@@ -61,12 +61,7 @@ public class PlayerScript : MonoBehaviour
         if(rb.position.y < -10)
         {
             SceneManager.LoadScene(2);
-        }
-        if(hitNote == true)
-        {
-            hitNote = false;
-        }
-        
+        }        
     }
 
     void FixedUpdate()
