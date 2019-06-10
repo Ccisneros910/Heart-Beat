@@ -6,22 +6,18 @@ public class BellSound : MonoBehaviour
 {
     private Hv_bell_fin_AudioLib note;
     private static bool playSound;
+    public static float frequency;
 
     // Start is called before the first frame update
     void Start()
     {
         playSound = false;
         note = GetComponent<Hv_bell_fin_AudioLib>();
-<<<<<<< HEAD
         note.SetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency, 50);
-=======
-        note.SetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency, 30f);
->>>>>>> parent of da3e481... Sound activation and merge fixes
         note.SendEvent(Hv_bell_fin_AudioLib.Event.Bang);
     }
     public void playNote()
     {
-<<<<<<< HEAD
         if (PlayerScript.noteHeight == 0)
         {
             frequency = 60;
@@ -40,9 +36,6 @@ public class BellSound : MonoBehaviour
         }
         Debug.Log("Frequence: " + frequency);
         note.SetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency, frequency);
-=======
-        note.SetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency, 70f);
->>>>>>> parent of da3e481... Sound activation and merge fixes
         note.SendEvent(Hv_bell_fin_AudioLib.Event.Bang);
         playSound = false;
     }
