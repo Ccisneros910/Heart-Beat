@@ -12,12 +12,29 @@ public class BellSound : MonoBehaviour
     {
         playSound = false;
         note = GetComponent<Hv_bell_fin_AudioLib>();
-        note.SetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency, 30f);
+        note.SetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency, 50);
         note.SendEvent(Hv_bell_fin_AudioLib.Event.Bang);
     }
     void playNote()
     {
-        note.SetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency, 70f);
+        if (PlayerScript.noteHeight == 0)
+        {
+            frequency = 60;
+        }
+        else if (PlayerScript.noteHeight == 1)
+        {
+            frequency = 65;
+        }
+        else if (PlayerScript.noteHeight == 2)
+        {
+            frequency = 68;
+        }
+        else if (PlayerScript.noteHeight == 3)
+        {
+            frequency = 70;
+        }
+        Debug.Log("Frequence: " + frequency);
+        note.SetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency, frequency);
         note.SendEvent(Hv_bell_fin_AudioLib.Event.Bang);
         playSound = false;
     }

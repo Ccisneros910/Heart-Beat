@@ -18,13 +18,13 @@ public class PlayerScript : MonoBehaviour
 
     // Bell SFX
     private GameObject bell;
-    private Hv_BellSFX1_AudioLib bell1;
-    private Hv_BellSFX2_AudioLib bell2;
-    private Hv_BellSFX3_AudioLib bell3;
-    private Hv_BellSFX4_AudioLib bell4;
     public Text countText;
-
     private Rigidbody2D rb;
+
+    // Used by BellSound.cs
+    public static bool hitNote;
+    private Vector2 notePlace;
+    public static float noteHeight;
 
 
     // Start is called before the first frame update
@@ -32,6 +32,7 @@ public class PlayerScript : MonoBehaviour
     {
         jumpCount = jumpCountResset;
         rb = GetComponent<Rigidbody2D>();
+        hitNote = false;
 
         // Initialize all of the bell sounds
         //Initialize Heavy Library here
@@ -52,6 +53,13 @@ public class PlayerScript : MonoBehaviour
         // set up to receive messages from the PD patch
         //bell1.RegisterSendHook();
         //bell1.FloatReceivedCallback += OnFloatMessage;
+    }
+
+    void OnFloatMessage(Hv_BellSFX1_AudioLib.FloatMessage message)
+    {
+        Debug.Log(message.receiverName + ": " + message.value);
+
+        countText.text = message.value.ToString();
     }
 
     // void OnFloatMessage(Hv_BellSFX1_AudioLib.FloatMessage message)
@@ -87,13 +95,23 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(feetpt.position, circleRadius, whatIsGround); 
-
         float move = 1;
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        hitNote = true;
+        Debug.Log("Note Hit!");
+
+        if (collision.gameObject.tag == "yellowGround")
+        {
+            hitNote = true;
+            //Debug.Log("Collision: " + hitNote);
+            noteHeight = collision.gameObject.transform.position.y;
+            //Debug.Log("Note Hit! Position: " + noteHeight);
+        }
+
         hitNote = true;
         Debug.Log("Note Hit!");
     }
