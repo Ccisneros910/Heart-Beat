@@ -54,12 +54,12 @@ public class PlayerScript : MonoBehaviour
         //bell1.FloatReceivedCallback += OnFloatMessage;
     }
 
-    void OnFloatMessage(Hv_BellSFX1_AudioLib.FloatMessage message)
-    {
-        Debug.Log(message.receiverName + ": " + message.value);
+    // void OnFloatMessage(Hv_BellSFX1_AudioLib.FloatMessage message)
+    // {
+        // Debug.Log(message.receiverName + ": " + message.value);
 
-        countText.text = message.value.ToString();
-    }
+        // countText.text = message.value.ToString();
+    // }
 
     private void Update()
     {

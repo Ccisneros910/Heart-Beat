@@ -11,8 +11,8 @@ public class BellSound : MonoBehaviour
     void Start()
     {
         playSound = false;
-        note = GetComponent<Hv_BellSFX1_AudioLib>();
-        note.SendEvent(Hv_BellSFX1_AudioLib.Event.Bang);
+       note = GetComponent<Hv_BellSFX1_AudioLib>();
+       note.SendEvent(Hv_BellSFX1_AudioLib.Event.Bang);
     }
     // Update is called once per frame
     void Update()
