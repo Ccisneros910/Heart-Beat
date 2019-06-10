@@ -35,8 +35,8 @@ public class PlayerScript : MonoBehaviour
 
         // Initialize all of the bell sounds
         //Initialize Heavy Library here
-        bell = GameObject.Find("/Player/bell1");
-        Assert.AreNotEqual(bell, null);
+        //bell = GameObject.Find("/Player/bell1");
+        //Assert.AreNotEqual(bell, null);
         //GameObject.Find("/Player/bell1")
         //bell1 = GetComponent<Hv_BellSFX1_AudioLib>();
         //bell1.SendEvent(Hv_BellSFX1_AudioLib.Event.Bang);

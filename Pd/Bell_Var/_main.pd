@@ -1,9 +1,9 @@
-#N canvas 744 76 1223 1004 10;
+#N canvas 1063 83 1223 1004 10;
 #X obj 172 450 dac~;
 #X obj 167 356 osc~;
 #X obj 323 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 31 18 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 31 18 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X msg 31 38 \; pd dsp \$1;
 #N canvas 0 50 1144 960 bellenv 1;
@@ -25,27 +25,28 @@
 #X obj 225 241 mtof;
 #X obj 221 266 osc~;
 #X obj 225 207 + 24;
-#X msg 189 141 93;
 #X msg 262 278 130;
 #X obj 172 415 *~ 0.3;
 #X obj 329 163 r bang @hv_event;
-#X obj 189 75 r frequence @ hv_param 70 150 100;
+#X obj 189 75 r frequency @hv_param 0 1000 200;
+#X msg 283 136 50;
+#X floatatom 186 144 5 0 0 0 - - -;
 #X connect 1 0 5 0;
 #X connect 2 0 5 1;
-#X connect 2 0 13 0;
 #X connect 2 0 12 0;
+#X connect 2 0 17 0;
 #X connect 3 0 4 0;
-#X connect 5 0 14 0;
+#X connect 5 0 13 0;
 #X connect 6 0 7 0;
 #X connect 7 0 1 0;
 #X connect 8 0 7 1;
 #X connect 9 0 10 0;
 #X connect 10 0 8 0;
 #X connect 11 0 9 0;
-#X connect 12 0 11 0;
-#X connect 12 0 6 0;
-#X connect 13 0 8 1;
-#X connect 14 0 0 0;
-#X connect 14 0 0 1;
-#X connect 15 0 2 0;
-#X connect 16 0 12 0;
+#X connect 12 0 8 1;
+#X connect 13 0 0 0;
+#X connect 13 0 0 1;
+#X connect 14 0 2 0;
+#X connect 15 0 17 0;
+#X connect 17 0 11 0;
+#X connect 17 0 6 0;
