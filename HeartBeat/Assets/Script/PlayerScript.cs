@@ -19,10 +19,6 @@ public class PlayerScript : MonoBehaviour
 
     // Bell SFX
     private GameObject bell;
-    private Hv_BellSFX1_AudioLib bell1;
-    private Hv_BellSFX2_AudioLib bell2;
-    private Hv_BellSFX3_AudioLib bell3;
-    private Hv_BellSFX4_AudioLib bell4;
     public Text countText;
 
     private Rigidbody2D rb;
