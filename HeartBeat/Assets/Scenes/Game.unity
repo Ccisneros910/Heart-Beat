@@ -553,11 +553,11 @@ MonoBehaviour:
   speed: 4
   jumpForce: 15
   feetpt: {fileID: 474317882}
-  circleRadius: 1
+  circleRadius: 0.35
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
-  jumpCountResset: 0
+    m_Bits: 512
+  jumpTime: 0.35
   countText: {fileID: 0}
 --- !u!50 &109849322
 Rigidbody2D:
@@ -4616,7 +4616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1257993925}
 --- !u!212 &1257993927
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5024,7 +5024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9573393d9d11365408e8be3bdf2c2023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1504883689}
 --- !u!212 &1504883691
 SpriteRenderer:
   m_ObjectHideFlags: 0
