@@ -16,7 +16,7 @@ public class BellSound : MonoBehaviour
         note.SetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency, 50);
         note.SendEvent(Hv_bell_fin_AudioLib.Event.Bang);
     }
-    public void playNote()
+    void playNote()
     {
         if (PlayerScript.noteHeight == 0)
         {
@@ -44,8 +44,6 @@ public class BellSound : MonoBehaviour
     void Update()
     {
         playSound = PlayerScript.hitNote;
-        //Debug.Log("hitNote: " + PlayerScript.hitNote);
-        //Debug.Log("Playsound: " + playSound);
         if (playSound == true) {
             //Debug.Log("frequency: " + note.GetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency));
             playNote();
