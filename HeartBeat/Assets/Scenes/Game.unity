@@ -404,9 +404,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 776291744}
+  - component: {fileID: 776291747}
   - component: {fileID: 776291746}
   - component: {fileID: 776291745}
-  - component: {fileID: 776291747}
   m_Layer: 8
   m_Name: bell1
   m_TagString: Untagged
@@ -437,9 +437,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 776291743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c2b710fa8fea484b8b1f5462132c5b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 5049eb3ec682b934a9be6700506822d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frequency: 200
 --- !u!82 &776291746
 AudioSource:
   m_ObjectHideFlags: 0
