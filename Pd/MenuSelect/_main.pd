@@ -28,6 +28,7 @@
 #X obj 584 63 delay 510;
 #X msg 682 55 1 10 \, 0 500 30;
 #X obj 689 94 hv.vline;
+#X obj 154 17 r bang @hv_event;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 1 0;
@@ -63,3 +64,4 @@
 #X connect 24 0 21 0;
 #X connect 25 0 26 0;
 #X connect 26 0 1 1;
+#X connect 27 0 3 0;

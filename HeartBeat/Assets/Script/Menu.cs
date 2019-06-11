@@ -8,6 +8,8 @@ public class Menu : MonoBehaviour
     private int[] xPositions = new int[4] { 140, 90, 130, 85};
     private int[] yPositions = new int[4] { 60, -40, -120, -120};
     private bool inCredits = false;
+    public static bool launchSelect = false;
+    public static bool switchScene = false;
     private RectTransform textPos, imagePos;
     // background effect
     public ParticleSystem ripples;
@@ -30,6 +32,9 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
+        inCredits = false;
+        launchSelect = false;
+        switchScene = false;
         // Selecting an option
         currentOption = 0;
         textPos = buttons[currentOption].GetComponent<RectTransform>();
@@ -80,16 +85,18 @@ public class Menu : MonoBehaviour
                 Debug.Log("can\'t go farther");
             }
             // checks for Player input
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
             {
+                launchSelect = true;
                 buttonPressed();
             }
         }
         else if (inCredits == true)
         {
             Debug.Log("Waiting for back button");
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
             {
+                launchSelect = true;
                 Debug.Log("Back to menu");
                 for (int i = 0; i < 3; i++)
                 {
@@ -101,6 +108,7 @@ public class Menu : MonoBehaviour
                 currentOption = 1;
                 moveHearts();
                 buttons[currentOption].GetComponent<Animation>().Play();
+
             }
         }
         void buttonPressed()

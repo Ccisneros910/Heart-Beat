@@ -34,6 +34,9 @@ public class PlayerScript : MonoBehaviour
         hitNote = false;
     }
 
+    // https://www.youtube.com/watch?v=nV77qLokSCo
+    // https://www.youtube.com/watch?v=QGDeafTx5ug&t=631s
+    // ^ References for player script
     private void Update()
     {
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
