@@ -13,8 +13,8 @@ public class cameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = GameObject.Find("Player").transform.position.x;
+        float x = GameObject.Find("Player").transform.position.x; //find player's x position
         c_NewPosition.x = x;
-        transform.position = c_NewPosition;
+        transform.position = c_NewPosition; //follow player's x position
     }
 }

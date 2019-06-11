@@ -5,16 +5,18 @@ using UnityEngine.Assertions;
 
 public class PlayerScript : MonoBehaviour
 {
-    public float speed;
-    public float jumpForce;
+    public float speed; //speed of player moving
+    public float jumpForce; //Height of player jumping
 
-    private bool isGrounded;
-    public static bool hitNote = false;
-    public Transform feetpt;
-    public float circleRadius;
-    public LayerMask whatIsGround;
-    private int jumpCount;
-    public int jumpCountResset;
+
+    private bool isGrounded; //check is grounded
+    public Transform feetpt; //an empty object is used to check is grounded
+    public float circleRadius; //the radius of circle(feetpt)
+    public LayerMask whatIsGround; //check which layer is ground
+
+    public float jumpTime; //how high the player can jump when holding space key
+    private bool isJumping;
+    private float jumpTimeCounter;
 
     // Bell SFX
     private GameObject bell;
@@ -29,25 +31,33 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        jumpCount = jumpCountResset;
         rb = GetComponent<Rigidbody2D>();
         hitNote = false;
     }
 
     private void Update()
     {
-        if (isGrounded == true)
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
-            jumpCount = jumpCountResset;
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0)
+        if (isJumping == true && Input.GetKey(KeyCode.Space))
         {
-            rb.velocity = Vector2.up * jumpForce;
-            jumpCount--;
+            if (jumpTimeCounter > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else if (jumpTimeCounter < 0)
+            {
+                isJumping = false;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && jumpCount == 0 && isGrounded == true)
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            rb.velocity = Vector2.up * jumpForce;
+            isJumping = false;
         }
         if(rb.position.y < -10)
         {
@@ -59,9 +69,11 @@ public class PlayerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(feetpt.position, circleRadius, whatIsGround); 
+        //Allow player tests to check objects on Ground layer
+        isGrounded = Physics2D.OverlapCircle(feetpt.position, circleRadius, whatIsGround);
+
         float move = 1;
-        rb.velocity = new Vector2(speed * move, rb.velocity.y);
+        rb.velocity = new Vector2(speed * move, rb.velocity.y); //auto moving forward
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
