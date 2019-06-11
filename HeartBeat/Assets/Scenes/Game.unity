@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789c59efdb92cc34ebf874b159b7a6fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 6
   jumpForce: 20
   feetpt: {fileID: 474317882}
   circleRadius: 0.35
