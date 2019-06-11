@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99478325}
   - component: {fileID: 99478324}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 32468089
+  m_SortingLayerID: -626605823
   m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 82b69199f3acd374d96770769d6be07d, type: 3}
@@ -792,6 +792,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   jumpTime: 0.35
+  countText: {fileID: 0}
 --- !u!212 &1974701294
 SpriteRenderer:
   m_ObjectHideFlags: 0

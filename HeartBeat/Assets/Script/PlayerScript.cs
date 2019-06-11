@@ -10,9 +10,11 @@ public class PlayerScript : MonoBehaviour
 
 
     private bool isGrounded; //check is grounded
+    public static bool hitNote = false;
     public Transform feetpt; //an empty object is used to check is grounded
     public float circleRadius; //the radius of circle(feetpt)
     public LayerMask whatIsGround; //check which layer is ground
+
 
     public float jumpTime; //how high the player can jump when holding space key
     private bool isJumping;
