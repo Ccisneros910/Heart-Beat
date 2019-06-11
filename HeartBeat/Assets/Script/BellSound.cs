@@ -20,19 +20,19 @@ public class BellSound : MonoBehaviour
     {
         if (PlayerScript.noteHeight == 0)
         {
-            frequency = 90;
+            frequency = 60;
         }
         else if (PlayerScript.noteHeight == 1)
         {
-            frequency = 93;
+            frequency = 65;
         }
         else if (PlayerScript.noteHeight == 2)
         {
-            frequency = 95;
+            frequency = 68;
         }
         else if (PlayerScript.noteHeight == 3)
         {
-            frequency = 98;
+            frequency = 70;
         }
         Debug.Log("Frequence: " + frequency);
         note.SetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency, frequency);
@@ -45,9 +45,8 @@ public class BellSound : MonoBehaviour
     {
         playSound = PlayerScript.hitNote;
         if (playSound == true) {
-            //Debug.Log("frequency: " + note.GetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency));
+            Debug.Log("frequency: " + note.GetFloatParameter(Hv_bell_fin_AudioLib.Parameter.Frequency));
             playNote();
         }
-        PlayerScript.hitNote = false;
     }
 }
