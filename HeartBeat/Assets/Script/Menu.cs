@@ -4,9 +4,9 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
-    public Text[] buttons = new Text[3];
-    private int[] xPositions = new int[3] { 140, 90, 130 };
-    private int[] yPositions = new int[3] { 60, -40, -120};
+    public Text[] buttons = new Text[5];
+    private int[] xPositions = new int[4] { 140, 90, 130, 85};
+    private int[] yPositions = new int[4] { 60, -40, -120, -120};
     private bool inCredits = false;
     private RectTransform textPos, imagePos;
     // background effect
@@ -40,19 +40,14 @@ public class Menu : MonoBehaviour
         //Initialize Heavy Library here
         pd = GetComponent<Hv_heartbeatHeavy_AudioLib>();
         pd.SendEvent(Hv_heartbeatHeavy_AudioLib.Event.Bang);
-        //pd.FillTableWithMonoAudioClip("PD", _clip);
-        // need this? ^ 
-
-        // set up to receive messages from the PD patch
-        //pd.RegisterSendHook();
-        //pd.FloatReceivedCallback += OnFloatMessage;
         StartCoroutine(playHB());
+        buttons[3].enabled = false;
+        buttons[4].enabled = false;
     }
     
     void OnFloatMessage(Hv_heartbeatHeavy_AudioLib.FloatMessage message)
     {
         Debug.Log(message.receiverName + ": " + message.value);
-
         countText.text = message.value.ToString();
     }
 
@@ -90,6 +85,24 @@ public class Menu : MonoBehaviour
                 buttonPressed();
             }
         }
+        else if (inCredits == true)
+        {
+            Debug.Log("Waiting for back button");
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                Debug.Log("Back to menu");
+                for (int i = 0; i < 3; i++)
+                {
+                    buttons[i].enabled = true;
+                }
+                buttons[3].enabled = false;
+                buttons[4].enabled = false;
+                inCredits = false;
+                currentOption = 1;
+                moveHearts();
+                buttons[currentOption].GetComponent<Animation>().Play();
+            }
+        }
         void buttonPressed()
         {
             // start the game
@@ -100,12 +113,19 @@ public class Menu : MonoBehaviour
             // display the credits
             else if (currentOption == 1 && inCredits == false)
             {
+                buttons[currentOption].GetComponent<Animation>().Stop();
                 // hide the options
                 for (int i = 0; i < 3; i++)
                 {
                     buttons[i].enabled = false;
                 }
+                //show the credits and back button
+                buttons[3].enabled = true;
+                buttons[4].enabled = true;
+                //going to the credits
                 inCredits = true;
+                moveHearts();
+                Debug.Log("incredits: " + inCredits);
             }
             // hide the credits
             else if (currentOption == 1 && inCredits == true)
@@ -114,6 +134,8 @@ public class Menu : MonoBehaviour
                 {
                     buttons[i].enabled = true;
                 }
+                buttons[3].enabled = false;
+                buttons[4].enabled = false;
                 inCredits = false;
             }
             // close the game
@@ -128,18 +150,22 @@ public class Menu : MonoBehaviour
         }
         void moveHearts()
         {
-            imagePos = leftBound.GetComponent<RectTransform>();
-            imagePos.localPosition = new Vector3(-xPositions[currentOption], yPositions[currentOption], 0);
-            imagePos = rightBound.GetComponent<RectTransform>();
-            imagePos.localPosition = new Vector3(xPositions[currentOption], yPositions[currentOption], 0);
-        }
-        void stopAnimation()
-        {
+            if (inCredits == false)
+            {
+                imagePos = leftBound.GetComponent<RectTransform>();
+                imagePos.localPosition = new Vector3(-xPositions[currentOption], yPositions[currentOption], 0);
+                imagePos = rightBound.GetComponent<RectTransform>();
+                imagePos.localPosition = new Vector3(xPositions[currentOption], yPositions[currentOption], 0);
+            }
+            else if(inCredits == true)
+            {
+                currentOption = 3;
+                imagePos = leftBound.GetComponent<RectTransform>();
+                imagePos.localPosition = new Vector3(-xPositions[currentOption], yPositions[currentOption], 0);
+                imagePos = rightBound.GetComponent<RectTransform>();
+                imagePos.localPosition = new Vector3(xPositions[currentOption], yPositions[currentOption], 0);
 
-        }
-        void startAnimation()
-        {
-
+            }
         }
     }
 }
