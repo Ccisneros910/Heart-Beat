@@ -13,41 +13,50 @@ public class PlayerScript : MonoBehaviour
     public Transform feetpt;
     public float circleRadius;
     public LayerMask whatIsGround;
-    private int jumpCount;
-    public int jumpCountResset;
+    public float jumpTime;
+    private bool isJumping;
+    private float jumpTimeCounter;
 
     // Bell SFX
     private GameObject bell;
     public Text countText;
+
     private Rigidbody2D rb;
 
     // Used by BellSound.cs
     private Vector2 notePlace;
     public static float noteHeight;
 
-
     // Start is called before the first frame update
     void Start()
     {
-        jumpCount = jumpCountResset;
         rb = GetComponent<Rigidbody2D>();
         hitNote = false;
     }
 
     private void Update()
     {
-        if (isGrounded == true)
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
-            jumpCount = jumpCountResset;
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0)
+        if(isJumping == true && Input.GetKey(KeyCode.Space))
         {
-            rb.velocity = Vector2.up * jumpForce;
-            jumpCount--;
+            if (jumpTimeCounter > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else if(jumpTimeCounter < 0)
+            {
+                isJumping = false;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && jumpCount == 0 && isGrounded == true)
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            rb.velocity = Vector2.up * jumpForce;
+            isJumping = false;
         }
         if(rb.position.y < -10)
         {
@@ -56,10 +65,10 @@ public class PlayerScript : MonoBehaviour
         hitNote = false;
     }
 
-
     void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(feetpt.position, circleRadius, whatIsGround); 
+        isGrounded = Physics2D.OverlapCircle(feetpt.position, circleRadius, whatIsGround);
+
         float move = 1;
         rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
